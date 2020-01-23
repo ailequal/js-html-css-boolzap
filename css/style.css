@@ -213,6 +213,8 @@ span {
 
 .chat {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   background-image: url(../img/background-chat-2.png);
   /* margin-right: 12px; */
   padding: 20px 50px;
@@ -220,7 +222,6 @@ span {
 }
 
 .bubble {
-  display: inline-block;
   max-width: 260px;
   border-radius: 8px;
   margin: 10px 0;
@@ -228,10 +229,12 @@ span {
 }
 
 .bubble.send {
+  margin-left: auto;
   background-color: rgb(208, 247, 183);
 }
 
 .bubble.receive {
+  margin-right: auto;
   background-color: #ffffff;
 }
 
