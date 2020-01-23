@@ -175,6 +175,11 @@ span {
   border-bottom: 4px solid #f4f7f4;
   padding: 10px;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: lightgrey;
 }
 
 .user img {
@@ -191,6 +196,23 @@ span {
   display: inline-block;
   margin-left: auto;
   padding-bottom: 20px;
+}
+
+/* media queries */
+@media screen and (max-width: 992px) {
+  .background_bollzap {
+    padding: 0;
+  }
+
+  .bollzap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 320px) {
+  .background_bollzap {
+    height: 320px;
+  }
 }
 
 /* notes */
