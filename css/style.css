@@ -27,6 +27,10 @@ span {
   color: #7a7a7a;
 }
 
+ul {
+  list-style: none;
+}
+
 .clearfix::after {
   content: '';
   display: table;
@@ -44,7 +48,6 @@ span {
 /* main */
 .background_bollzap {
   position: relative;
-  /* width: 100vw; */
   height: 100vh;
   padding: 20px 0;
   background-color: #e0e0e0;
@@ -68,7 +71,6 @@ span {
   width: 80%;
   height: 100%;
   margin: auto;
-  /* background-color: yellow; */
 }
 
 .ui_left,
@@ -79,7 +81,6 @@ span {
 }
 
 .ui_left {
-  /* min-width: 215px; */
   width: 30%;
 }
 
@@ -108,6 +109,11 @@ span {
 .top_bar i {
   margin-left: 14px;
   color: #636363;
+  cursor: pointer;
+}
+
+.top_bar h2 {
+  padding-bottom: 5px;
   cursor: pointer;
 }
 
@@ -162,7 +168,6 @@ span {
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 5px 0 5px 40px;
-  /* line-height: 30px; */
 }
 
 .contact {
@@ -183,7 +188,11 @@ span {
 }
 
 .user:hover {
-  background-color: lightgrey;
+  background-color: #e0e0e0;
+}
+
+.select {
+  background-color: #e0e0e0;
 }
 
 .user img {
@@ -216,9 +225,7 @@ span {
   display: flex;
   flex-direction: column;
   background-image: url(../img/background-chat-2.png);
-  /* margin-right: 12px; */
-  padding: 20px 50px;
-  /* padding: 20px 50px 100px 50px; */
+  padding: 20px 40px;
   overflow-y: scroll;
 }
 
@@ -233,6 +240,7 @@ span {
   border-radius: 8px;
   margin: 10px 0;
   padding: 10px;
+  line-height: 22px;
 }
 
 .bubble.send {
@@ -263,7 +271,7 @@ span {
 }
 
 .write i {
-  height: 20px;
+  font-size: 24px;
   color: #636363;
   cursor: pointer;
 }

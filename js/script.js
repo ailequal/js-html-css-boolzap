@@ -1,5 +1,4 @@
 // code
 $(document).ready(function () {
-  // contact height
-  
+  console.log('hello world');
 });
