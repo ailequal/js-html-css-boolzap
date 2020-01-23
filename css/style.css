@@ -221,9 +221,18 @@ span {
 
 .bubble {
   display: inline-block;
+  max-width: 260px;
   border-radius: 8px;
+  margin: 10px 0;
   padding: 10px;
+}
+
+.bubble.send {
   background-color: rgb(208, 247, 183);
+}
+
+.bubble.receive {
+  background-color: #ffffff;
 }
 
 .bubble h2 {
@@ -234,7 +243,7 @@ span {
   color: #7a7a7a;
 }
 
-.send {
+.write {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,13 +252,13 @@ span {
   background-color: #f4f7f4;
 }
 
-.send i {
+.write i {
   height: 20px;
   color: #636363;
   cursor: pointer;
 }
 
-.send input {
+.write input {
   flex-grow: 1;
   margin: auto 20px;
   padding: 10px 20px;
