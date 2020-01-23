@@ -18,13 +18,13 @@ h2 {
 }
 
 h3 {
-  font-size: 14px;
-  color: #e0e0e0;
+  font-size: 12.5px;
+  color: #a0a0a0;
 }
 
 span {
   font-size: 14px;
-  color: #e0e0e0;
+  color: #7a7a7a;
 }
 
 .clearfix::after {
@@ -98,11 +98,13 @@ span {
 .top_bar img {
   width: 40px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .top_bar i {
   margin-left: 14px;
   color: #636363;
+  cursor: pointer;
 }
 
 .notification {
@@ -118,7 +120,7 @@ span {
 
 .notification i {
   border-radius: 50%;
-  padding: 10px;
+  padding: 13px 10px;
   background-color: #ffffff;
   font-size: 20px;
   color: #9de1fe;
@@ -126,30 +128,38 @@ span {
 
 .notification span {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .search {
   padding: 5px 10px;
-  background-color: #e0e0e0;
+  background-color: #f4f7f4;
 }
 
 .contact {
   flex-grow: 1;
   overflow-y: scroll;
-  background-color: #ffffff;
+  padding-right: 12px;
+  background-color: #f4f7f4;
 }
 
 .user {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 5px 10px;
+  border-bottom: 4px solid #f4f7f4;
+  padding: 10px;
+  background-color: #ffffff;
 }
 
 .user img {
   width: 60px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.user h2 {
+  padding-bottom: 5px;
 }
 
 .user span {
