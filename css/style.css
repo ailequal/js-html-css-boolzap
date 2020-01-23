@@ -6,8 +6,51 @@
 }
 
 body {
+  min-width: 768px;
+  min-height: 320px;
   font-family: sans-serif;
   font-size: 16px;
 }
 
 /* main */
+.background_bollzap {
+  position: relative;
+  /* width: 100vw; */
+  height: 100vh;
+  padding: 20px 0;
+  background-color: #e0e0e0;
+}
+
+.background_bollzap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 120px;
+  content: '';
+  background-color: #009688;
+}
+
+.bollzap {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  width: 80%;
+  height: calc(100vh - 40px);
+  margin: auto;
+  background-color: yellow;
+}
+
+/* notes */
+.notes {
+  /* green bar on the background */
+  background-color: #009688;
+  /* main background */
+  background-color: #e0e0e0;
+  background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
+  /* notification alert */
+  background-color: #9de1fe;
+  /* chat background */
+  background-color: #e5ddd5;
+}
