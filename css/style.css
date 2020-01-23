@@ -65,6 +65,29 @@ body {
   width: 70%;
 }
 
+.top_bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+}
+
+.top_bar > :first-child {
+  margin-right: auto;
+}
+
+.top_bar img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.top_bar i {
+  margin-left: 14px; 
+  color: #636363;
+}
+
 /* notes */
 .notes {
   /* green bar on the background */
@@ -72,6 +95,8 @@ body {
   /* main background */
   background-color: #e0e0e0;
   background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
+  /* icon color */
+  color: #636363;
   /* notification alert */
   background-color: #9de1fe;
   /* chat background */
