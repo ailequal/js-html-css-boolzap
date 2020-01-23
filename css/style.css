@@ -69,12 +69,12 @@ span {
 
 .ui_left,
 .ui_right {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
 .ui_left {
-  display: flex;
-  flex-direction: column;
   /* min-width: 215px; */
   width: 30%;
 }
@@ -155,9 +155,9 @@ span {
 .search input {
   width: 100%;
   height: 40px;
+  border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 5px 0 5px 40px;
-  border: 1px solid #e0e0e0;
   /* line-height: 30px; */
 }
 
@@ -205,6 +205,36 @@ span {
 
 .info div {
   margin-left: 10px;
+}
+
+.chat {
+  flex-grow: 1;
+  margin-right: 12px;
+  background-color: brown;
+  overflow-y: scroll;
+}
+
+.send {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 2px solid #e0e0e0;
+  padding: 10px 20px;
+  background-color: #f4f7f4;
+}
+
+.send i {
+  height: 20px;
+  color: #636363;
+  cursor: pointer;
+}
+
+.send input {
+  flex-grow: 1;
+  margin: auto 20px;
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
 }
 
 /* media queries */
