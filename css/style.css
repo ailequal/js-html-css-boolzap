@@ -168,7 +168,7 @@ span {
 .contact {
   flex-grow: 1;
   overflow-y: scroll;
-  padding-right: 12px;
+  padding: 0 12px;
   background-color: #f4f7f4;
 }
 
@@ -218,8 +218,15 @@ span {
   background-image: url(../img/background-chat-2.png);
   /* margin-right: 12px; */
   padding: 20px 50px;
+  /* padding: 20px 50px 100px 50px; */
   overflow-y: scroll;
 }
+
+/* little fix for the margin-bottom only for firefox */
+/* .chat::after {
+  visibility: hidden;
+  content: 'spacer';
+} */
 
 .bubble {
   max-width: 260px;
@@ -287,16 +294,17 @@ span {
 }
 
 /* notes */
-.notes {
-  /* green bar on the background */
+.color {
+  /* bar on the background */
   background-color: #009688;
   /* main background */
   background-color: #e0e0e0;
-  background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
+  /* top_bar */
+  background-color: #e0e0e0;
   /* icon color */
   color: #636363;
   /* notification alert */
   background-color: #9de1fe;
-  /* chat background */
-  background-color: #e5ddd5;
+  /* search, contact and write background */
+  background-color: #f4f7f4;
 }
