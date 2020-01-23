@@ -37,6 +37,10 @@ span {
   float: left;
 }
 
+.right {
+  float: right;
+}
+
 /* main */
 .background_bollzap {
   position: relative;
@@ -64,7 +68,7 @@ span {
   width: 80%;
   height: 100%;
   margin: auto;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .ui_left,
@@ -209,9 +213,25 @@ span {
 
 .chat {
   flex-grow: 1;
-  margin-right: 12px;
-  background-color: brown;
+  background-image: url(../img/background-chat-2.png);
+  /* margin-right: 12px; */
+  padding: 20px 50px;
   overflow-y: scroll;
+}
+
+.bubble {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgb(208, 247, 183);
+}
+
+.bubble h2 {
+  padding-bottom: 5px;
+}
+
+.bubble span {
+  color: #7a7a7a;
 }
 
 .send {
