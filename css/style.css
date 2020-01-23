@@ -12,6 +12,16 @@ body {
   font-size: 16px;
 }
 
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
 /* main */
 .background_bollzap {
   position: relative;
@@ -37,9 +47,22 @@ body {
   z-index: 1;
   max-width: 1200px;
   width: 80%;
-  height: calc(100vh - 40px);
+  height: 100%;
   margin: auto;
   background-color: yellow;
+}
+
+.ui_left,
+.ui_right {
+  height: 100%;
+}
+
+.ui_left {
+  width: 30%;
+}
+
+.ui_right {
+  width: 70%;
 }
 
 /* notes */
