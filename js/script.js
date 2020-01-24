@@ -35,12 +35,13 @@ function send() {
   }
   contact.children('span').text(time);
   info.find('span').text(time);
+  $('.write input').val('');
   setTimeout(receive, 3000);
 }
 
 function receive() {
   var text = ['Yeah, sure.', 'I am on my way!', 'Let\' do it!!', 'See you around.', 'What are you talking about?', 'This is awesome!', 'Sorry, I am busy tomorrow...', 'I don\'t mind that.'];
-  var textIndex = text[getRandomIntInclusive(0, text.length)];
+  var textIndex = text[getRandomIntInclusive(0, text.length - 1)];
   var chat = $('.chat_user.display_flex');
   var bubble = $('.template .bubble').clone();
   var contact = $('.user.select');
