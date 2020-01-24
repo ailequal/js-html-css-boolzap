@@ -45,6 +45,22 @@ ul {
   float: right;
 }
 
+.display {
+  display: inline-block;
+}
+
+.not_display {
+  display: none;
+}
+
+.select {
+  background-color: #e0e0e0;
+}
+
+.not_select {
+  background-color: #ffffff;
+}
+
 /* main */
 .background_bollzap {
   position: relative;
@@ -188,15 +204,10 @@ ul {
   align-items: center;
   border-bottom: 4px solid #f4f7f4;
   padding: 10px;
-  background-color: #ffffff;
   cursor: pointer;
 }
 
 .user:hover {
-  background-color: #e0e0e0;
-}
-
-.select {
   background-color: #e0e0e0;
 }
 
@@ -286,7 +297,7 @@ ul {
 }
 
 .option {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 30px;
   right: 0;
@@ -299,10 +310,6 @@ ul {
 .option h2 {
   margin: 5px;
   cursor: pointer;
-}
-
-.active {
-  display: inline-block;
 }
 
 .write {
@@ -345,7 +352,7 @@ ul {
   }
 }
 
-/* notes */
+/* note */
 .color {
   /* bar on the background */
   background-color: #009688;
