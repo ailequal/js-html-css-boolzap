@@ -107,6 +107,10 @@ ul {
   cursor: pointer;
 }
 
+.top_bar span {
+  font-size: 12.5px;
+}
+
 .notification {
   display: flex;
   align-items: center;

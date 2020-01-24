@@ -15,33 +15,42 @@ $(document).ready(function() {
 
 });
 
-var date = new Date;
-console.log(date.getHours());
-console.log(date.getMinutes());
-
 
 // function
 function send() {
   var text = $('.write input').val();
   var chat = $('.chat_user.display_flex');
   var bubble = $('.template .bubble').clone();
+  var contact = $('.user.select');
+  var info = $('.info_user.display_flex');
   var date = new Date;
+  var time = date.getHours() + ':' + date.getMinutes();
   bubble.addClass('send');
   bubble.children('p').text(text);
-  bubble.children('span').text(date.getHours() + ':' + date.getMinutes());
+  bubble.children('span').text(time);
   chat.append(bubble);
+  if (text.length > 10) {
+    contact.find('h3').text(text.substring(0, 10) + ' [...]');
+  } else {
+    contact.find('h3').text(text);
+  }
+  contact.children('span').text(time);
+  info.find('span').text(time);
   setTimeout(receive, 3000);
 }
 
 function receive() {
-  var text = 'Yeah, sure';
+  var text = 'Yeah, sure.';
   var chat = $('.chat_user.display_flex');
   var bubble = $('.template .bubble').clone();
+  var contact = $('.user.select');
   var date = new Date;
+  var time = date.getHours() + ':' + date.getMinutes();
   bubble.addClass('receive');
   bubble.children('p').text(text);
-  bubble.children('span').text(date.getHours() + ':' + date.getMinutes());
+  bubble.children('span').text(time);
   chat.append(bubble);
+  contact.find('h3').text(text);
 }
 
 
