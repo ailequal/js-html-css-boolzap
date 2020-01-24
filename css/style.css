@@ -37,30 +37,6 @@ ul {
   clear: both;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.display {
-  display: inline-block;
-}
-
-.not_display {
-  display: none;
-}
-
-.select {
-  background-color: #e0e0e0;
-}
-
-.not_select {
-  background-color: #ffffff;
-}
-
 /* main */
 .background_bollzap {
   position: relative;
@@ -112,12 +88,9 @@ ul {
   background-color: #e0e0e0;
 }
 
-.top_bar > :first-child {
-  margin-right: auto;
-}
-
 .top_bar img {
   width: 44px;
+  margin-right: auto;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -157,7 +130,7 @@ ul {
   padding-bottom: 5px;
 }
 
-.notification span {
+.notification h3 {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -227,22 +200,24 @@ ul {
   padding-bottom: 20px;
 }
 
-.info {
-  display: flex;
+.info_user {
+  margin-right: auto;
   align-items: center;
 }
 
-.info div {
+.info_user div {
   margin-left: 10px;
 }
 
 .chat {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
   background-image: url(../img/background-chat-2.png);
   padding: 20px 40px;
   overflow-y: scroll;
+}
+
+.chat_user {
+  flex-direction: column;
 }
 
 /* little fix for the margin-bottom only for firefox */
@@ -260,20 +235,17 @@ ul {
   line-height: 22px;
 }
 
-.bubble::after {
+.bubble i {
   position: absolute;
   display: none;
   top: 6px;
   right: 6px;
-  content: '\f078';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
   font-size: 18px;
   color: #636363;
   cursor: pointer;
 }
 
-.bubble:hover::after {
+.bubble:hover i {
   display: inline-block;
 }
 
@@ -287,7 +259,7 @@ ul {
   background-color: #ffffff;
 }
 
-.bubble h2 {
+.bubble p {
   padding-right: 14px;
   padding-bottom: 5px;
 }
@@ -297,7 +269,6 @@ ul {
 }
 
 .option {
-  /* display: none; */
   position: absolute;
   top: 30px;
   right: 0;
@@ -333,6 +304,35 @@ ul {
   padding: 10px 20px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
+}
+
+/* toggle */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.display_flex {
+  display: flex;
+}
+
+.display_inline_block {
+  display: inline-block;
+}
+
+.not_display {
+  display: none;
+}
+
+.select {
+  background-color: #e0e0e0;
+}
+
+.not_select {
+  background-color: #ffffff;
 }
 
 /* media queries */

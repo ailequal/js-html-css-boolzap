@@ -24,7 +24,7 @@
             <i class="fas fa-bell-slash"></i>
             <div>
               <h2>Get notified of new messages</h2>
-              <span>Turn on desktop notificatons</span>
+              <h3>Turn on desktop notificatons</h3>
             </div>
           </div>
           <div class="search">
@@ -69,11 +69,18 @@
         </div>
         <div class="ui_right left">
           <div class="top_bar">
-            <div class="info">
+            <div id="info_bob" class="info_user display_flex">
               <img src="img/bob.jpg" alt="bob.jpg">
               <div>
                 <h2>Bob</h2>
                 <h3>Last login today at 12:10</h3>
+              </div>
+            </div>
+            <div id="info_angela" class="info_user not_display">
+              <img src="img/angela.jpg" alt="angela.jpg">
+              <div>
+                <h2>Angela</h2>
+                <h3>Last login today at 16:30</h3>
               </div>
             </div>
             <i class="fas fa-search"></i>
@@ -81,43 +88,69 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
           <div class="chat">
-              <div class="bubble send">
-                <h2>Hi there how are you?</h2>
-                <span class="right">09:30</span>
-                <div class="option display">
-                  <h2>Message info</h2>
-                  <h2>Delete message</h2>
+              <div id="chat_bob" class="chat_user display_flex">
+                <div class="bubble send">
+                  <p>Hi there how are you?</p>
+                  <span class="right">09:30</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option display_inline_block">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
+                </div>
+                <div class="bubble receive">
+                  <p>I'm fine, thank you. Have you seen the latest news from the Boolzap application??</p>
+                  <span class="right">09:34</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option not_display">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
+                </div>
+                <div class="bubble send">
+                  <p>Wait, what?</p>
+                  <span class="right">09:35</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option not_display">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
+                </div>
+                <div class="bubble receive">
+                  <p>Yeah, it's incredibile.</p>
+                  <span class="right">09:40</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option not_display">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
                 </div>
               </div>
-              <div class="bubble receive">
-                <h2>I'm fine, thank you. Have you seen the latest news from the Boolzap application??</h2>
-                <span class="right">09:34</span>
-                <div class="option not_display">
-                  <h2>Message info</h2>
-                  <h2>Delete message</h2>
+              <div id="chat_angela" class="chat_user not_display">
+                <div class="bubble send">
+                  <p>Hello world!!</p>
+                  <span class="right">18:20</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option display_inline_block">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
                 </div>
-              </div>
-              <div class="bubble send">
-                <h2>Wait, what?</h2>
-                <span class="right">09:35</span>
-                <div class="option not_display">
-                  <h2>Message info</h2>
-                  <h2>Delete message</h2>
-                </div>
-              </div>
-              <div class="bubble receive">
-                <h2>Yeah, it's incredibile.</h2>
-                <span class="right">09:40</span>
-                <div class="option not_display">
-                  <h2>Message info</h2>
-                  <h2>Delete message</h2>
+                <div class="bubble receive">
+                  <p>See you soon!!</p>
+                  <span class="right">19:34</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option not_display">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
                 </div>
               </div>
           </div>
           <div class="write">
             <i class="far fa-smile"></i>
             <input type="text" name="chat" placeholder="Write a message">
-            <i class="fas fa-microphone"></i>
+            <i class="fas fa-arrow-alt-circle-right"></i>
           </div>
         </div>
       </div>
