@@ -2,11 +2,17 @@
 $(document).ready(function () {
   console.log('hello world');
 
-  // send a message to that specific user and get a random reply after n seconds (also with keyboard)
+  // send a message to that specific user and get a random reply after n seconds (also enter with keyboard)
   $('#send').click(function () {
     send();
   });
 
+  $('.write input').keydown(function () {
+    if (event.which === 13) {
+      send();
+    }
+  });
+  
 });
 
 
