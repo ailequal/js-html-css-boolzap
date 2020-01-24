@@ -12,6 +12,11 @@ $(document).ready(function() {
     }
   });
 
+  // click on a user, select it, show its chat and messages log
+  $('.user').click(function() {
+    changeChat($(this));
+  });
+
 });
 
 
@@ -57,21 +62,29 @@ function receive() {
     contact.find('h3').text(textIndex.substring(0, 14) + ' [...]');
   } else {
     contact.find('h3').text(textIndex);
-  }}
-
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+}
 
+function changeChat(select) {
+  var contactSelect = $('.user.select');
+  if (select.hasClass('.select')) {
+    // do nothing
+  } else {
+    select.removeClass('not_select').addClass('select');
+    contactSelect.removeClass('select').addClass('not_select');
+  }
+}
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 // to do
-// send a message to that specific user and get a random reply after n seconds (also with keyboard)
-
 // search feature
 
-// click on a user, select it, show its chat and send message
+// click on a user, select it, show its chat and messages log
 
 // show and hide the option menu on bubble chat with delete option
 
