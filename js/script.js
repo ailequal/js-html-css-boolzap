@@ -1,6 +1,5 @@
 // code
 $(document).ready(function() {
-  console.log('hello world');
 
   // send a message to that specific user and get a random reply after n seconds (also enter with keyboard)
   $('#send').click(function() {
@@ -29,8 +28,8 @@ function send() {
   bubble.children('p').text(text);
   bubble.children('span').text(time);
   chat.append(bubble);
-  if (text.length > 10) {
-    contact.find('h3').text(text.substring(0, 10) + ' [...]');
+  if (text.length > 14) {
+    contact.find('h3').text(text.substring(0, 14) + ' [...]');
   } else {
     contact.find('h3').text(text);
   }
@@ -40,18 +39,28 @@ function send() {
 }
 
 function receive() {
-  var text = 'Yeah, sure.';
+  var text = ['Yeah, sure.', 'I am on my way!', 'Let\' do it!!', 'See you around.', 'What are you talking about?', 'This is awesome!', 'Sorry, I am busy tomorrow...', 'I don\'t mind that.'];
+  var textIndex = text[getRandomIntInclusive(0, text.length)];
   var chat = $('.chat_user.display_flex');
   var bubble = $('.template .bubble').clone();
   var contact = $('.user.select');
   var date = new Date;
   var time = date.getHours() + ':' + date.getMinutes();
   bubble.addClass('receive');
-  bubble.children('p').text(text);
+  bubble.children('p').text(textIndex);
   bubble.children('span').text(time);
   chat.append(bubble);
-  contact.find('h3').text(text);
-}
+  if (textIndex.length > 14) {
+    contact.find('h3').text(textIndex.substring(0, 14) + ' [...]');
+  } else {
+    contact.find('h3').text(textIndex);
+  }}
+
+  function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 
 // to do
