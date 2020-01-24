@@ -1,17 +1,17 @@
 // code
-$(document).ready(function () {
+$(document).ready(function() {
   console.log('hello world');
 
   // send a message to that specific user and get a random reply after n seconds (also enter with keyboard)
-  $('#send').click(function () {
+  $('#send').click(function() {
     send();
-    setTimeout(receive(), 3000);
+    setTimeout(receive, 3000);
   });
 
-  $('.write input').keydown(function () {
+  $('.write input').keydown(function() {
     if (event.which === 13) {
       send();
-      setTimeout(receive(), 3000);
+      setTimeout(receive, 3000);
     }
   });
 
@@ -36,6 +36,7 @@ function receive() {
   bubble.children('p').text(text);
   chat.append(bubble);
 }
+
 
 // to do
 // send a message to that specific user and get a random reply after n seconds (also with keyboard)
