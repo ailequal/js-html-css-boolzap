@@ -24,19 +24,21 @@ function send() {
   var info = $('.info_user.display_flex');
   var date = new Date;
   var time = date.getHours() + ':' + date.getMinutes();
-  bubble.addClass('send');
-  bubble.children('p').text(text);
-  bubble.children('span').text(time);
-  chat.append(bubble);
-  if (text.length > 14) {
-    contact.find('h3').text(text.substring(0, 14) + ' [...]');
-  } else {
-    contact.find('h3').text(text);
+  if (text !== '') {
+    bubble.addClass('send');
+    bubble.children('p').text(text);
+    bubble.children('span').text(time);
+    chat.append(bubble);
+    if (text.length > 14) {
+      contact.find('h3').text(text.substring(0, 14) + ' [...]');
+    } else {
+      contact.find('h3').text(text);
+    }
+    contact.children('span').text(time);
+    info.find('span').text(time);
+    $('.write input').val('');
+    setTimeout(receive, 3000);
   }
-  contact.children('span').text(time);
-  info.find('span').text(time);
-  $('.write input').val('');
-  setTimeout(receive, 3000);
 }
 
 function receive() {
