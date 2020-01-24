@@ -306,6 +306,10 @@ ul {
   border-radius: 4px;
 }
 
+.template {
+  display: none;
+}
+
 /* toggle */
 .left {
   float: left;
