@@ -65,15 +65,23 @@ function receive() {
   }
 }
 
-function changeChat(select) {
+function changeChat(userSelect) {
   var contactSelect = $('.user.select');
-  if (select.hasClass('.select')) {
-    // do nothing
-  } else {
-    select.removeClass('not_select').addClass('select');
+  var contactData = userSelect.attr('data-element');
+  // console.log(contactData);
+  var infoData = $('info_user[data-element=' + contactData + ']');
+  console.log(infoData);
+  var chatData;
+  if (!userSelect.hasClass('.select')) {
+    userSelect.removeClass('not_select').addClass('select');
     contactSelect.removeClass('select').addClass('not_select');
   }
 }
+
+// data-element="0"
+// contact
+// info
+// chat
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -81,11 +89,9 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 // to do
 // search feature
-
 // click on a user, select it, show its chat and messages log
-
 // show and hide the option menu on bubble chat with delete option
-
 // click on option, add option box in that moment and remove it afterwards

@@ -35,7 +35,7 @@
           <div class="contact">
             <ul>
               <li>
-                <div id="bob" class="user select">
+                <div id="bob" class="user select" data-element="0">
                   <img src="img/bob.jpg" alt="bob.jpg">
                   <div>
                     <h2>Bob</h2>
@@ -45,7 +45,7 @@
                 </div>
               </li>
               <li>
-                <div id="angela" class="user not_select">
+                <div id="angela" class="user not_select" data-element="1">
                   <img src="img/angela.jpg" alt="angela.jpg">
                   <div>
                     <h2>Angela</h2>
@@ -55,7 +55,7 @@
                 </div>
               </li>
               <li>
-                <div id="carla" class="user not_select">
+                <div id="carla" class="user not_select" data-element="2">
                   <img src="img/carla.jpg" alt="carla.jpg">
                   <div>
                     <h2>Carla</h2>
@@ -69,18 +69,25 @@
         </div>
         <div class="ui_right left">
           <div class="top_bar">
-            <div id="info_bob" class="info_user display_flex">
+            <div id="info_bob" class="info_user display_flex" data-element="0">
               <img src="img/bob.jpg" alt="bob.jpg">
               <div>
                 <h2>Bob</h2>
                 <h3>Last login today at <span>12:10</span></h3>
               </div>
             </div>
-            <div id="info_angela" class="info_user not_display">
+            <div id="info_angela" class="info_user not_display" data-element="1">
               <img src="img/angela.jpg" alt="angela.jpg">
               <div>
                 <h2>Angela</h2>
                 <h3>Last login today at <span>16:30</span></h3>
+              </div>
+            </div>
+            <div id="info_carla" class="info_user not_display" data-element="2">
+              <img src="img/carla.jpg" alt="carla.jpg">
+              <div>
+                <h2>Carla</h2>
+                <h3>Last login today at <span>08:10</span></h3>
               </div>
             </div>
             <i class="fas fa-search"></i>
@@ -88,7 +95,7 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
           <div class="chat">
-              <div id="chat_bob" class="chat_user display_flex">
+              <div id="chat_bob" class="chat_user display_flex" data-element="0">
                 <div class="bubble send">
                   <p>Hi there how are you?</p>
                   <span class="right">09:30</span>
@@ -126,7 +133,7 @@
                   </div>
                 </div>
               </div>
-              <div id="chat_angela" class="chat_user not_display">
+              <div id="chat_angela" class="chat_user not_display" data-element="1">
                 <div class="bubble send">
                   <p>Hello world!!</p>
                   <span class="right">18:20</span>
@@ -139,6 +146,26 @@
                 <div class="bubble receive">
                   <p>See you soon!!</p>
                   <span class="right">19:34</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option not_display">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
+                </div>
+              </div>
+              <div id="chat_carla" class="chat_user not_display" data-element="2">
+                <div class="bubble send">
+                  <p>Hi there!</p>
+                  <span class="right">11:00</span>
+                  <i class="fas fa-chevron-down"></i>
+                  <div class="option display_inline_block">
+                    <h2>Message info</h2>
+                    <h2>Delete message</h2>
+                  </div>
+                </div>
+                <div class="bubble receive">
+                  <p>Hey pal, how are you doing?</p>
+                  <span class="right">11:23</span>
                   <i class="fas fa-chevron-down"></i>
                   <div class="option not_display">
                     <h2>Message info</h2>
