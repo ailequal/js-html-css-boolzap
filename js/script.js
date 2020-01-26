@@ -67,14 +67,18 @@ function receive() {
 
 function changeChat(userSelect) {
   var contactSelect = $('.user.select');
-  var contactData = userSelect.attr('data-element');
-  // console.log(contactData);
-  var infoData = $('info_user[data-element=' + contactData + ']');
-  console.log(infoData);
-  var chatData;
+  var dataElement = userSelect.attr('data-element');
+  var info = $(".info_user[data-element='" + dataElement + "']");
+  var infoSelect = $('.info_user.display_flex');
+  var chat = $(".chat_user[data-element='" + dataElement + "']");
+  var chatSelect = $('.chat_user.display_flex');
   if (!userSelect.hasClass('.select')) {
     userSelect.removeClass('not_select').addClass('select');
     contactSelect.removeClass('select').addClass('not_select');
+    info.removeClass('not_display').addClass('display_flex');
+    infoSelect.removeClass('display_flex').addClass('not_display');
+    chat.removeClass('not_display').addClass('display_flex');
+    chatSelect.removeClass('display_flex').addClass('not_display');
   }
 }
 
