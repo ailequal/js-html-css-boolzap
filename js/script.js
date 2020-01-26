@@ -17,6 +17,11 @@ $(document).ready(function() {
     changeChat($(this));
   });
 
+  // show and hide the option menu on bubble chat with delete option
+  $('.bubble i').click(function() {
+    toggleOption($(this));
+  });
+
 });
 
 
@@ -72,7 +77,7 @@ function changeChat(userSelect) {
   var infoSelect = $('.info_user.display_flex');
   var chat = $(".chat_user[data-element='" + dataElement + "']");
   var chatSelect = $('.chat_user.display_flex');
-  if (!userSelect.hasClass('.select')) {
+  if (!userSelect.hasClass('select')) {
     userSelect.removeClass('not_select').addClass('select');
     contactSelect.removeClass('select').addClass('not_select');
     info.removeClass('not_display').addClass('display_flex');
@@ -82,10 +87,12 @@ function changeChat(userSelect) {
   }
 }
 
-// data-element="0"
-// contact
-// info
-// chat
+function toggleOption(userSelect) {
+  var option = userSelect.siblings('.option');
+  console.log(option);
+  $('.option').removeClass('display_inline_block').addClass('not_display');
+  option.removeClass('not_display').addClass('display_inline_block');
+}
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -96,6 +103,5 @@ function getRandomIntInclusive(min, max) {
 
 // to do
 // search feature
-// click on a user, select it, show its chat and messages log
 // show and hide the option menu on bubble chat with delete option
 // click on option, add option box in that moment and remove it afterwards
