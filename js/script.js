@@ -1,11 +1,12 @@
 // code
 $(document).ready(function() {
 
-  // send a message to that specific user and get a random reply after n seconds (also enter with keyboard)
+  // send a message to that specific user and get a random reply after n seconds
   $('#send').click(function() {
     send();
   });
 
+  // the same but with keybaord
   $('.write input').keydown(function() {
     if (event.which === 13) {
       send();
@@ -18,8 +19,17 @@ $(document).ready(function() {
   });
 
   // show and hide the option menu on bubble chat with delete option
-  $('.bubble i').click(function() {
-    toggleOption($(this));
+  $(document).on('click', function() {
+    $('.bubble i').click(function() {
+      toggleOption($(this));
+    });
+  });
+
+  // delete a single chat message with option menu
+  $(document).on('click', function() {
+    $('.delete').click(function() {
+      deleteBubble($(this));
+    });
   });
 
 });
@@ -89,9 +99,13 @@ function changeChat(userSelect) {
 
 function toggleOption(userSelect) {
   var option = userSelect.siblings('.option');
-  console.log(option);
   $('.option').removeClass('display_inline_block').addClass('not_display');
   option.removeClass('not_display').addClass('display_inline_block');
+}
+
+function deleteBubble(userSelect) {
+  var message = userSelect.closest('.bubble');
+  message.remove();
 }
 
 function getRandomIntInclusive(min, max) {
@@ -103,5 +117,9 @@ function getRandomIntInclusive(min, max) {
 
 // to do
 // search feature
-// show and hide the option menu on bubble chat with delete option
 // click on option, add option box in that moment and remove it afterwards
+
+// to fix
+// time with zero
+// option window click outside and toggle
+// $(document).on('click', function()
