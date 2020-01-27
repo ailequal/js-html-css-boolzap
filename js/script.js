@@ -122,9 +122,10 @@ function changeChat(userSelect) {
 }
 
 function toggleOption(userSelect) {
-  var option = userSelect.siblings('.option');
-  $('.option').removeClass('display_inline_block').addClass('not_display');
-  option.removeClass('not_display').addClass('display_inline_block');
+  var option = $('.template .option').clone();
+  userSelect.append(option);
+  // $('.option').removeClass('display_inline_block').addClass('not_display');
+  // option.removeClass('not_display').addClass('display_inline_block');
 }
 
 function deleteBubble(userSelect) {
