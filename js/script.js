@@ -24,17 +24,13 @@ $(document).ready(function() {
   });
 
   // show and hide the option menu on bubble chat with delete option
-  $(document).on('click', function() {
-    $('.bubble i').click(function() {
+  $(document).on('click', '.bubble i', function() {
       toggleOption($(this));
-    });
   });
 
   // delete a single chat message with option menu
-  $(document).on('click', function() {
-    $('.delete').click(function() {
+  $(document).on('click', '.delete', function() {
       deleteBubble($(this));
-    });
   });
 
 });
@@ -122,10 +118,18 @@ function changeChat(userSelect) {
 }
 
 function toggleOption(userSelect) {
-  var option = $('.template .option').clone();
-  userSelect.append(option);
-  // $('.option').removeClass('display_inline_block').addClass('not_display');
-  // option.removeClass('not_display').addClass('display_inline_block');
+  var optionTemplate = $('.template .option').clone();
+  var optionBubble = $('.bubble .option');
+  optionBubble.remove();
+  // console.log(userSelect.siblings().hasClass('option'));
+  if (!userSelect.siblings().hasClass('option')) {
+    userSelect.parent().append(optionTemplate);
+    console.log('if');
+  } else {
+    // userSelect.siblings('.option').remove();
+    optionBubble.remove();
+    console.log('else');
+  }
 }
 
 function deleteBubble(userSelect) {
@@ -140,12 +144,8 @@ function getRandomIntInclusive(min, max) {
 }
 
 
-// to do
-// click on option, add option box in that moment and remove it afterwards
-
 // to fix
 // time with zero
 // option window click outside and toggle
-// $(document).on('click', function()
 // when i send a message, the contact goes up to the top
 // search in the chat
