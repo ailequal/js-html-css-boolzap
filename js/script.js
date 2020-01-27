@@ -6,6 +6,18 @@ $(document).ready(function() {
     search();
   });
 
+  // change microphone icon to arrow
+  $('.write input').keyup(function() {
+    var input = $('.write input').val();
+    if (input.length !== 0) {
+      $('.arrow').removeClass('not_display').addClass('display_inline_block');
+      $('.microphone').removeClass('display_inline_block').addClass('not_display');
+    } else {
+      $('.arrow').removeClass('display_inline_block').addClass('not_display');
+      $('.microphone').removeClass('not_display').addClass('display_inline_block');
+    }
+  });
+
   // send a message to that specific user and get a random reply after n seconds
   $('#send').click(function() {
     send();
@@ -69,6 +81,7 @@ function send() {
     bubble.children('p').text(text);
     bubble.children('span').text(time);
     chat.append(bubble);
+    scrollBottom();
     if (text.length > 14) {
       contact.find('h3').text(text.substring(0, 14) + ' [...]');
     } else {
@@ -93,6 +106,7 @@ function receive() {
   bubble.children('p').text(textIndex);
   bubble.children('span').text(time);
   chat.append(bubble);
+  scrollBottom();
   if (textIndex.length > 14) {
     contact.find('h3').text(textIndex.substring(0, 14) + ' [...]');
   } else {
@@ -105,6 +119,11 @@ function addZero(number) {
     number = '0' + number;
   }
   return number;
+}
+
+function scrollBottom() {
+    var chatHeight = $('.chat').height();
+    $('.chat').scrollTop(chatHeight);
 }
 
 function changeChat(userSelect) {
@@ -151,10 +170,12 @@ function getRandomIntInclusive(min, max) {
 }
 
 
+// to add
+// when i send a message, the contact goes up to the top
+// search in the chat log
+
 // to fix
 // option window click outside and toggle
-// when i send a message, the contact goes up to the top
+// option window is behind other bubbles chat
 // search should only start from first name letter
-// search in the chat
-// focus on .write input change icon from microphone to send
-// .option window is behind other bubbles chat
+// auto scroll stops working after a lot of messages
