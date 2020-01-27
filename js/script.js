@@ -1,6 +1,19 @@
 // code
 $(document).ready(function() {
 
+  // search feature
+  $('#search').keyup(function() {
+    var search = $('#search').val().toLowerCase();
+    $('.user').each(function() {
+      var user = $(this).find('h2').text().toLowerCase();
+      if (user.includes(search)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
   // send a message to that specific user and get a random reply after n seconds
   $('#send').click(function() {
     send();
@@ -123,3 +136,4 @@ function getRandomIntInclusive(min, max) {
 // time with zero
 // option window click outside and toggle
 // $(document).on('click', function()
+// when i send a message, the contact goes up to the top
