@@ -215,7 +215,7 @@ ul {
 
 .chat {
   flex-grow: 1;
-  background-image: url(../img/background-chat-2.png);
+  background-image: url(../img/background-chat.png);
   padding: 20px 40px;
   overflow-y: scroll;
 }

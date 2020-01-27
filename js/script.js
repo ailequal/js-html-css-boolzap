@@ -63,7 +63,7 @@ function send() {
   var contact = $('.user.select');
   var info = $('.info_user.display_flex');
   var date = new Date;
-  var time = date.getHours() + ':' + date.getMinutes();
+  var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
   if (text !== '') {
     bubble.addClass('send');
     bubble.children('p').text(text);
@@ -88,7 +88,7 @@ function receive() {
   var bubble = $('.template .bubble').clone();
   var contact = $('.user.select');
   var date = new Date;
-  var time = date.getHours() + ':' + date.getMinutes();
+  var time = addZero(date.getHours()) + ':' + addZero(date.getMinutes());
   bubble.addClass('receive');
   bubble.children('p').text(textIndex);
   bubble.children('span').text(time);
@@ -98,6 +98,13 @@ function receive() {
   } else {
     contact.find('h3').text(textIndex);
   }
+}
+
+function addZero(number) {
+  if (number < 10) {
+    number = '0' + number;
+  }
+  return number;
 }
 
 function changeChat(userSelect) {
@@ -145,7 +152,9 @@ function getRandomIntInclusive(min, max) {
 
 
 // to fix
-// time with zero
 // option window click outside and toggle
 // when i send a message, the contact goes up to the top
+// search should only start from first name letter
 // search in the chat
+// focus on .write input change icon from microphone to send
+// .option window is behind other bubbles chat
