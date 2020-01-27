@@ -3,15 +3,7 @@ $(document).ready(function() {
 
   // search feature
   $('#search').keyup(function() {
-    var search = $('#search').val().toLowerCase();
-    $('.user').each(function() {
-      var user = $(this).find('h2').text().toLowerCase();
-      if (user.includes(search)) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
-    });
+    search();
   });
 
   // send a message to that specific user and get a random reply after n seconds
@@ -49,6 +41,25 @@ $(document).ready(function() {
 
 
 // function
+function search() {
+  var search = $('#search').val().toLowerCase();
+  // search a contact
+  $('.user').each(function() {
+    var user = $(this).find('h2').text().toLowerCase();
+    if (user.includes(search)) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
+  // search in the chat
+  // $('.bubble').each(function() {
+  //   var bubble = $(this).find('p').text().toLowerCase();
+  //   var dataElement = $(this).parent().attr('data-element');
+  //   console.log(dataElement);
+  // });
+}
+
 function send() {
   var text = $('.write input').val();
   var chat = $('.chat_user.display_flex');
@@ -129,7 +140,6 @@ function getRandomIntInclusive(min, max) {
 
 
 // to do
-// search feature
 // click on option, add option box in that moment and remove it afterwards
 
 // to fix
@@ -137,3 +147,4 @@ function getRandomIntInclusive(min, max) {
 // option window click outside and toggle
 // $(document).on('click', function()
 // when i send a message, the contact goes up to the top
+// search in the chat
