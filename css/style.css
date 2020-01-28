@@ -287,6 +287,10 @@ ul {
   cursor: pointer;
 }
 
+.option h2:hover {
+  text-decoration: underline;
+}
+
 .write {
   display: flex;
   justify-content: space-between;
