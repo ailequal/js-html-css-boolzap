@@ -123,7 +123,7 @@ function addZero(number) {
 }
 
 function scrollBottom() {
-    var chatHeight = $('.chat').height();
+    var chatHeight = $('.chat_user.display_flex').height();
     $('.chat').scrollTop(chatHeight);
 }
 
@@ -178,4 +178,3 @@ function getRandomIntInclusive(min, max) {
 // option window click outside and toggle
 // option window is behind other bubbles chat
 // search should only start from first name letter
-// auto scroll stops working after a lot of messages
