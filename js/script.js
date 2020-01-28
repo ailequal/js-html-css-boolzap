@@ -81,6 +81,7 @@ function send() {
     bubble.children('p').text(text);
     bubble.children('span').text(time);
     chat.append(bubble);
+    contact.prependTo('.contact ul');
     scrollBottom();
     if (text.length > 14) {
       contact.find('h3').text(text.substring(0, 14) + ' [...]');
@@ -171,7 +172,6 @@ function getRandomIntInclusive(min, max) {
 
 
 // to add
-// when i send a message, the contact goes up to the top
 // search in the chat log
 
 // to fix
