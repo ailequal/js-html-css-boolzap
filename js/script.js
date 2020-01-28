@@ -175,6 +175,5 @@ function getRandomIntInclusive(min, max) {
 // search in the chat log
 
 // to fix
-// option window click outside and toggle
-// option window is behind other bubbles chat
+// option toggle
 // search should only start from first name letter
